@@ -84,17 +84,48 @@ TEST DATA 2: [12, 5, -5, 0, 4]
 // - Add ... between elements and start and end of string
 // - Log string to console
 
-const temp1 = [17, 21, 23];
-const temp2 = [12, 5, -5, 0, 4];
+// const temp1 = [17, 21, 23];
+// const temp2 = [12, 5, -5, 0, 4];
 
-const printForecast = function (temp1, temp2) {
-  temps = temp1.concat(temp2);
+// const printForecast = function (temp1, temp2) {
+//   temps = temp1.concat(temp2);
 
-  for (let i = 0; i < temps.length; i++) {
-    let days = i + 1;
-    console.log(`${temps[i]}ºC in ${days} days`);
+//   for (let i = 0; i < temps.length; i++) {
+//     let days = i + 1;
+//     console.log(`${temps[i]}ºC in ${days} days`);
+//   }
+// };
+
+// const forecast = printForecast(temp1, temp2);
+// console.log(forecast);
+
+function countTrue(arr) {
+  let sumTrue = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] != null && arr[i] != '') {
+      if (String(arr[i]) === 'true') {
+        sumTrue++;
+      }
+    }
   }
-};
+  return sumTrue;
+}
+// console.log(countTrue([true, true, false, true, false]));
 
-const forecast = printForecast(temp1, temp2);
-console.log(forecast);
+const obj = { shrimp: 15, tots: 12 };
+
+const propertyNames = Object.keys(toArray);
+
+console.log(propertyNames);
+
+function toArray(obj) {
+  let myString;
+  for (let i = 0; i < obj.length; i++) {
+    const propertyNames = Object.keys(obj[i]);
+    myString += propertyNames;
+    myString += obj[i];
+  }
+  return myString;
+}
+
+console.log(toArray({ shrimp: 15, tots: 12 }));
