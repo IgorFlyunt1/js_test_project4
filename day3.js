@@ -20,25 +20,25 @@
 // - Find min value in temp array
 // - Subtract min from max (amplitude) and return it
 
-// const temperatures = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
+const temperatures = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
 
-// const calcTempAmlitude = function (temp1, temp2) {
-//   let temps = temp1.concat(temp2);
-//   let max = temps[0];
-//   let min = temps[0];
+const calcTempAmlitude = function (temp1, temp2) {
+  let temps = temp1.concat(temp2);
+  let max = temps[0];
+  let min = temps[0];
 
-//   for (let i = 0; i < temps.length; i++) {
-//     const curTemp = temps[i];
+  for (let i = 0; i < temps.length; i++) {
+    const curTemp = temps[i];
 
-//     if (typeof curTemp !== 'number') continue;
-//     if (curTemp > max) max = curTemp;
-//     if (curTemp < min) min = curTemp;
-//   }
-//   console.log(max, min);
-//   return max - min;
-// };
-// const amplitude = calcTempAmlitude([3, 5, 1], [6, 4, 9]);
-// console.log(amplitude);
+    if (typeof curTemp !== 'number') continue;
+    if (curTemp > max) max = curTemp;
+    if (curTemp < min) min = curTemp;
+  }
+  console.log(max, min);
+  return max - min;
+};
+const amplitude = calcTempAmlitude([3, 5, 1], [6, 4, 9]);
+console.log(amplitude);
 
 ////////////////////////////////////////////////////////
 ///////////////////////////////////////
@@ -84,20 +84,20 @@ TEST DATA 2: [12, 5, -5, 0, 4]
 // - Add ... between elements and start and end of string
 // - Log string to console
 
-// const temp1 = [17, 21, 23];
-// const temp2 = [12, 5, -5, 0, 4];
+const temp1 = [17, 21, 23];
+const temp2 = [12, 5, -5, 0, 4];
 
-// const printForecast = function (temp1, temp2) {
-//   temps = temp1.concat(temp2);
+const printForecast = function (temp1, temp2) {
+  temps = temp1.concat(temp2);
 
-//   for (let i = 0; i < temps.length; i++) {
-//     let days = i + 1;
-//     console.log(`${temps[i]}ºC in ${days} days`);
-//   }
-// };
+  for (let i = 0; i < temps.length; i++) {
+    let days = i + 1;
+    console.log(`${temps[i]}ºC in ${days} days`);
+  }
+};
 
-// const forecast = printForecast(temp1, temp2);
-// console.log(forecast);
+const forecast = printForecast(temp1, temp2);
+console.log(forecast);
 
 function countTrue(arr) {
   let sumTrue = 0;
